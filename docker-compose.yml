@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  cpp-sgx:
+    image: enclaive/c-sgx
+    container_name: "c-sgx"
+    build:
+      context: .
+    ports:
+      - "443:443"
+    devices:
+      - "/dev/sgx_enclave:/dev/sgx_enclave"
