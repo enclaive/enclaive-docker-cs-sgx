@@ -11,7 +11,6 @@ WORKDIR /app/
 COPY ./app /app/
 COPY ./app.manifest.template ./entrypoint.sh /app/
 
-
 RUN make
 
 RUN gramine-argv-serializer "/usr/bin/mono" "/app/app.exe" > args.txt &&\

@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 
 namespace Hello
 {
@@ -6,7 +7,14 @@ namespace Hello
     {
         public static void Main (string[] args)
         {
-            Console.WriteLine ("Hello World!");
+            for (;;)  {
+
+                string text = System.IO.File.ReadAllText(@"/app/hello.txt");
+                System.Console.WriteLine("Contents of hello.txt = {0}", text);
+                Thread.Sleep(1000);
+
+            }
+
         }
     }
 }

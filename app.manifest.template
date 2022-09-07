@@ -3,7 +3,7 @@ loader.entrypoint = "file:{{ gramine.libos }}"
 libos.entrypoint = "/usr/bin/mono"
 loader.argv_src_file = "file:/app/args.txt"
 
-loader.log_level = "error"
+loader.log_level = "warning"
 
 loader.env.LD_LIBRARY_PATH = "/lib:{{ arch_libdir }}"
 loader.env.MALLOC_ARENA_MAX = "1"
@@ -33,8 +33,13 @@ sgx.trusted_files = [
     "file:{{ gramine.runtimedir() }}/",
     "file:{{ arch_libdir }}/",
     "file:/app/args.txt",
+    "file:/app/hello.txt",
     "file:/usr/bin/mono",
     "file:/usr/lib/mono/",
     "file:/app/app.exe",
     "file:/etc/localtime",
+    "file:/etc/mono/config",
+    "file:/etc/nsswitch.conf",
+    "file:/etc/passwd",
+    "file:/usr/lib/libmono-native.so",
 ]
