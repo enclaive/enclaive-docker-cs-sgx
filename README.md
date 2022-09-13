@@ -1,8 +1,8 @@
-SGX c# demonstration
+# Csharp-SGX Demonstration: Manipulation of Shared Volume/File
 
 
 
-##Building and Running
+## Building and Running
 
 
 ```sh
@@ -10,7 +10,7 @@ docker build . -t enclaive-docker-cs-sgx && docker run --rm --name enclaive-dock
 ```
 
 
-## observe the app is reading shakespeare
+## Observe the app is reading shakespeare
 
 ```
 Contents of hello.txt = From fairest creatures we desire increase,
@@ -19,7 +19,7 @@ But as the riper should by time decease,
 ```
 
 
-## attempt manipulation of inputs
+## Attempt manipulation of inputs
 
 while the app is running in a different terminal
 
@@ -28,7 +28,7 @@ docker exec -ti  enclaive-docker-cs-sgx sh -c 'echo im a bad bad man > /app/hell
 ```
 
 
-## observe that the app refuses to read the bad text
+## Observe that the app refuses to read the bad text
 
 ```
 error: Accessing file '/app/hello.txt' is denied: incorrect hash of file chunk at 0-17.
