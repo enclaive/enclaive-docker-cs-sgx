@@ -1,4 +1,4 @@
-# Csharp-SGX Demonstration: Manipulation of Shared Volume/File
+# Csharp-SGX Demonstration: Manipulation of protected Volume/File
 
 
 
@@ -19,7 +19,7 @@ But as the riper should by time decease,
 ```
 
 
-## Attempt manipulation of inputs
+## Manipulating the input file
 
 while the app is running in a different terminal
 
